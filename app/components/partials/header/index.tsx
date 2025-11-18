@@ -38,32 +38,32 @@ const Header = () => {
             <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center">
               <span className="text-white-foreground font-bold text-xl">D</span>
             </div>
-            <span className="text-xl font-bold text-white">DevSites</span>
+            <span className="text-xl font-bold text-white">Co. Solutions</span>
           </div>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8">
             <button
               onClick={() => scrollToSection("sobre")}
-              className="text-white hover:text-white transition-colors"
+              className="text-white hover:text-white transition-colors cursor-pointer"
             >
               Sobre nós
             </button>
             <button
               onClick={() => scrollToSection("servicos")}
-              className="text-white hover:text-white transition-colors"
+              className="text-white hover:text-white transition-colors cursor-pointer"
             >
               Serviços
             </button>
             <button
               onClick={() => scrollToSection("processo")}
-              className="text-white hover:text-white transition-colors"
+              className="text-white hover:text-white transition-colors cursor-pointer"
             >
               Processo
             </button>
             <button
               onClick={() => scrollToSection("contato")}
-              className="text-white hover:text-white transition-colors"
+              className="text-white hover:text-white transition-colors cursor-pointer"
             >
               Contato
             </button>

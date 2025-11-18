@@ -1,72 +1,79 @@
-import { Link } from "lucide-react";
-import { FooterProps } from "./types";
+"use client";
 
-export default function Footer({
-  logo,
-  brandName,
-  mainLinks = [],
-  legalLinks = [],
-  copyright,
-}: FooterProps) {
+import { Link } from "lucide-react";
+import Button from "../../ui/button";
+
+const scrollToSection = (id: string) => {
+  document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+};
+
+const navItems = [
+  { label: "Sobre nós", id: "sobre" },
+  { label: "Serviços", id: "servicos" },
+  { label: "Processo", id: "processo" },
+  { label: "Contato", id: "contato" },
+];
+
+export default function Footer() {
   return (
-    <footer className=" bg-black text-white">
-      <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8 lg:py-16">
-        <div className="grid grid-cols-1 gap-10 lg:grid-cols-12">
-          {/* Logo + Copyright */}
-          <div className="flex flex-col lg:col-span-4">
+    <footer className="bg-black text-white">
+      <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-8">
+          <div className="lg:col-span-5">
             <Link
               href="/"
-              className="inline-flex items-center gap-3 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary transition-colors hover:text-primary"
-              aria-label={`Voltar para a página inicial da ${brandName}`}
+              className="inline-flex items-center gap-3 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/40 transition-opacity hover:opacity-90"
+              aria-label="Co. Solutions - Página inicial"
             >
-              {logo}
-              <span className="text-xl font-bold tracking-tight">
-                {brandName}
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center shadow-xl">
+                <span className="text-white font-black text-2xl tracking-tighter">
+                  D
+                </span>
+              </div>
+              <span className="text-2xl font-black text-white tracking-tight">
+                Co. Solutions
               </span>
             </Link>
 
-            <div className="mt-8 text-sm text-muted-foreground lg:mt-12">
-              <p>{copyright?.text ?? "© Todos os direitos reservados."}</p>
-              {copyright?.license && (
-                <p className="mt-1">{copyright.license}</p>
-              )}
-            </div>
+            <p className="mt-8 text-sm text-white/60 leading-relaxed max-w-md">
+              Transformamos ideias em soluções digitais de alto impacto. Seu
+              próximo projeto começa aqui.
+            </p>
+
+            <p className="mt-10 text-xs text-white/40">
+              © {new Date().getFullYear()} Co. Solutions. Todos os direitos
+              reservados.
+            </p>
           </div>
 
-          {/* Navegação */}
-          <div className="lg:col-span-8">
-            <div className="flex flex-col gap-8 lg:flex-row lg:justify-end lg:gap-16">
-              {/* Links principais */}
-              <nav aria-label="Navegação principal">
-                <ul className="flex flex-wrap gap-x-8 gap-y-4">
-                  {mainLinks.map((link) => (
-                    <li key={link.href}>
-                      <a
-                        href={link.href}
-                        className="text-sm font-medium text-primary underline-offset-4 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-sm transition-colors"
-                      >
-                        {link.label}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
+          {/* Navegação + CTA */}
+          <div className="lg:col-span-7">
+            <div className="flex flex-col items-start gap-10 lg:items-end">
+              {/* Links */}
+              <nav
+                aria-label="Navegação do rodapé"
+                className="flex flex-wrap gap-x-10 gap-y-6"
+              >
+                {navItems.map((item) => (
+                  <button
+                    key={item.id}
+                    onClick={() => scrollToSection(item.id)}
+                    className="text-base font-medium text-white/90 hover:text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/40 rounded-md px-1"
+                  >
+                    {item.label}
+                  </button>
+                ))}
               </nav>
 
-              {/* Links legais */}
-              <nav aria-label="Links legais">
-                <ul className="flex flex-wrap gap-x-8 gap-y-4">
-                  {legalLinks.map((link) => (
-                    <li key={link.href}>
-                      <a
-                        href={link.href}
-                        className="text-sm text-muted-foreground underline-offset-4 hover:text-foreground hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-sm transition-colors"
-                      >
-                        {link.label}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </nav>
+              {/* CTA Principal */}
+              <Button
+                onClick={() => scrollToSection("contato")}
+                variant="glass"
+                size="lg"
+                className="min-w-[220px] shadow-2xl"
+              >
+                Solicitar Orçamento
+              </Button>
             </div>
           </div>
         </div>
