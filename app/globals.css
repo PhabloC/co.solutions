@@ -1,5 +1,10 @@
 @import "tailwindcss";
+@import "./styles/animations.css";
 
 body {
   background-color: black;
 }
+
+/* .float-bg {
+  animation: float 20s ease-in-out infinite;
+} */
