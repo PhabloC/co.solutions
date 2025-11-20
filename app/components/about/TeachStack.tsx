@@ -1,5 +1,5 @@
 import FigmaIcon from "@/app/svg/FigmaIcon";
-import GithubIcon from "@/app/svg/GithubIcon";
+import GSAPIcon from "@/app/svg/GSAPIcon";
 import NextjsIcon from "@/app/svg/NextjsIcon";
 import NodejsIcon from "@/app/svg/NodejsIcon";
 import ReactIcon from "@/app/svg/ReactIcon";
@@ -13,7 +13,7 @@ const techs = [
   { name: "TypeScript", icon: <TypeScriptIcon /> },
   { name: "Tailwind CSS", icon: <TailwindIcon /> },
   { name: "Node.js", icon: <NodejsIcon /> },
-  { name: "GSAP", icon: <GithubIcon /> },
+  { name: "GSAP", icon: <GSAPIcon /> },
   { name: "Figma", icon: <FigmaIcon /> },
 ];
 

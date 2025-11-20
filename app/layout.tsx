@@ -11,7 +11,7 @@ export default function RootLayout({
     <html lang="pt-br">
       <Header />
       <body>{children}</body>
-      <Footer logo={undefined} brandName={""} mainLinks={[]} legalLinks={[]} />
+      <Footer />
     </html>
   );
 }

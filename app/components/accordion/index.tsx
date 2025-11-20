@@ -12,24 +12,47 @@ export const FAQ = ({ className }: { className?: string }) => {
   const [selectedCategory, setSelectedCategory] =
     useState<CategoryKey>("general");
 
+  // Cores roxas sutis para os efeitos de luz (mesmo estilo do hero)
+  const purpleGlow = "rgba(139, 92, 246, 0.35)";
+  const purpleGlowSecondary = "rgba(168, 85, 247, 0.32)";
+
   return (
     <section
       className={cn("relative overflow-hidden py-20 md:py-28", className)}
+      style={{ backgroundColor: "#000000" }}
     >
-      <div className="container relative z-10 mx-auto px-4">
+      {/* Background gradient effects - efeitos roxos sutis */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none" style={{ zIndex: 0 }}>
+        {/* Top-center purple glow */}
+        <div
+          aria-hidden="true"
+          style={{
+            position: "absolute",
+            top: "-150px",
+            left: "50%",
+            transform: "translateX(-50%)",
+            width: "700px",
+            height: "700px",
+            borderRadius: "50%",
+            background: `radial-gradient(circle, ${purpleGlow} 0%, ${purpleGlow} 30%, transparent 70%)`,
+            filter: "blur(80px)",
+          }}
+        />
+      </div>
+
+      <div className="container relative mx-auto px-4" style={{ zIndex: 10 }}>
         {/* Header */}
-        <div className="relative z-10 flex flex-col items-center justify-center text-center">
-          <span className="mb-6 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-lg font-semibold text-white md:text-xl">
+        <div className="flex flex-col items-center justify-center text-center">
+          <span className="mb-6 text-lg font-semibold text-gray-400 md:text-xl">
             Tire suas dúvidas
           </span>
           <h2 className="mb-12 text-4xl font-bold tracking-tight text-white md:text-5xl lg:text-6xl">
             Perguntas Frequentes
           </h2>
-          <div className="absolute -top-48 left-1/2 h-96 w-full max-w-4xl -translate-x-1/2 rounded-full bg-gradient-to-r from-primary/10 to-primary/5 blur-3xl" />
         </div>
 
         {/* Tabs */}
-        <div className="relative z-10 mt-12 flex flex-wrap justify-center gap-3 md:gap-4">
+        <div className="mt-12 flex flex-wrap justify-center gap-3 md:gap-4">
           {Object.entries(categories).map(([key, label]) => (
             <button
               key={key}
@@ -37,8 +60,8 @@ export const FAQ = ({ className }: { className?: string }) => {
               className={cn(
                 "relative overflow-hidden rounded-lg border px-5 py-3 text-sm font-medium transition-all duration-500 md:text-base text-white",
                 selectedCategory === key
-                  ? "border-primary shadow-lg"
-                  : "border-border bg-background/50 hover:text-white/90"
+                  ? "border-white/30 bg-white/10 shadow-lg"
+                  : "border-white/10 bg-white/5 hover:bg-white/10 hover:text-white"
               )}
             >
               <span className="relative z-10">{label}</span>
@@ -46,7 +69,7 @@ export const FAQ = ({ className }: { className?: string }) => {
                 {selectedCategory === key && (
                   <motion.div
                     layoutId="activeTab"
-                    className="absolute inset-0 bg-gradient-to-r from-primary to-primary/80"
+                    className="absolute inset-0 bg-white/10"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
@@ -90,8 +113,8 @@ const FAQItem = ({
     <motion.div
       layout
       className={cn(
-        "overflow-hidden rounded-xl border border-white bg-card transition-all",
-        isOpen && "ring-2 ring-primary/20"
+        "overflow-hidden rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm transition-all",
+        isOpen && "ring-2 ring-white/20"
       )}
     >
       <button
@@ -118,7 +141,7 @@ const FAQItem = ({
             transition={{ duration: 0.35, ease: "easeInOut" }}
           >
             <div className="px-6 pb-6">
-              <p className="text-white/80 leading-relaxed">{answer}</p>
+              <p className="text-gray-300 leading-relaxed">{answer}</p>
             </div>
           </motion.div>
         )}

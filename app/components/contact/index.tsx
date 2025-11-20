@@ -53,19 +53,53 @@ export default function Contact({ className }: ContactSectionProps) {
     }
   };
 
+  // Cores roxas sutis para os efeitos de luz (mesmo estilo do hero)
+  const purpleGlow = "rgba(139, 92, 246, 0.35)";
+  const purpleGlowSecondary = "rgba(168, 85, 247, 0.32)";
+
   return (
-    <section className={cn("w-full bg-black py-24", className)} id="contato">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <section className={cn("w-full py-24", className)} id="contato" style={{ backgroundColor: "#000000" }}>
+      {/* Background gradient effects - efeitos roxos sutis */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none" style={{ zIndex: 0 }}>
+        {/* Bottom-left purple glow */}
+        <div
+          aria-hidden="true"
+          style={{
+            position: "absolute",
+            bottom: "-150px",
+            left: "-150px",
+            width: "700px",
+            height: "700px",
+            borderRadius: "50%",
+            background: `radial-gradient(circle, ${purpleGlow} 0%, ${purpleGlow} 30%, transparent 70%)`,
+            filter: "blur(80px)",
+          }}
+        />
+        {/* Top-right purple glow */}
+        <div
+          aria-hidden="true"
+          style={{
+            position: "absolute",
+            top: "-150px",
+            right: "-150px",
+            width: "700px",
+            height: "700px",
+            borderRadius: "50%",
+            background: `radial-gradient(circle, ${purpleGlowSecondary} 0%, ${purpleGlowSecondary} 30%, transparent 70%)`,
+            filter: "blur(80px)",
+          }}
+        />
+      </div>
+      <div className="relative mx-auto max-w-7xl px-6 lg:px-8" style={{ zIndex: 10 }}>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           {/* Textos */}
           <div className="space-y-8">
             <h2 className="text-4xl md:text-5xl font-bold text-white tracking-tight">
-              Vamos conversar sobre o seu projeto
+              Vamos conversar sobre seu projeto?
             </h2>
             <p className="text-lg text-gray-300 leading-relaxed">
-              Preencha o formulário ao lado e entraremos em contato o mais
-              rápido possível. Estamos ansiosos para entender suas necessidades
-              e transformar suas ideias em realidade.
+              Preencha o formulário ao lado e eu entro em contato o mais rápido possível.
+              Vamos juntos transformar suas ideias em uma solução digital que gere resultados reais para seu negócio.
             </p>
 
             <div className="space-y-6 pt-8">
