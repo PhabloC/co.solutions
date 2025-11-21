@@ -2,6 +2,11 @@
 
 import { motion } from "framer-motion";
 import { fadeUpTitle, fadeUpStagger } from "@/app/components/animations";
+import Button from "../ui/button";
+
+const scrollToSection = (id: string) => {
+  document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+};
 
 // Conteúdo fixo do hero
 const heroContent = {
@@ -10,13 +15,8 @@ const heroContent = {
     linkText: "AI Assistant",
     linkHref: "#",
   },
-  title: "Transform Your Business\nwith AI-Powered Solutions",
-  description:
-    "Revolutionize your workflow with our cutting-edge artificial intelligence platform",
-  buttons: [
-    { text: "Start Free Trial", href: "#", variant: "primary" as const },
-    { text: "Watch Demo", href: "#", variant: "secondary" as const },
-  ],
+  title: "Sites de alta conversão que elevam seu negócio",
+  description: "Você foca no seu negócio. Nós cuidamos do online",
 };
 
 export default function Hero() {
@@ -125,7 +125,7 @@ export default function Hero() {
         className="relative w-full max-w-5xl mx-auto px-6 sm:px-8 lg:px-12 py-20 sm:py-24 lg:py-32"
         style={{ zIndex: 10 }}
       >
-        <div className="mx-auto max-w-4xl text-center">
+        <div className="mx-auto  text-center">
           {/* Announcement banner */}
           <motion.div
             initial={{ opacity: 0, y: -20 }}
@@ -150,7 +150,7 @@ export default function Hero() {
             variants={fadeUpTitle}
             initial="hidden"
             animate="visible"
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-6 sm:mb-8 leading-tight whitespace-pre-line"
+            className="text-5xl sm:text-5xl md:text-5xl lg:text-7xl font-bold tracking-tight text-white mb-6 sm:mb-8 leading-tight whitespace-pre-line"
           >
             {heroContent.title}
           </motion.h1>
@@ -165,17 +165,16 @@ export default function Hero() {
             {heroContent.description}
           </motion.p>
 
-          {/* Call to action buttons */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.4, duration: 0.6 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4"
-          >
-            {heroContent.buttons.map((cta, index) =>
-              renderCallToAction(cta, index)
-            )}
-          </motion.div>
+          <div>
+            <Button
+              onClick={() => scrollToSection("contato")}
+              variant="glass"
+              size="lg"
+              className="min-w-[220px] shadow-2xl"
+            >
+              Entrar em Contato
+            </Button>
+          </div>
         </div>
       </div>
     </div>
