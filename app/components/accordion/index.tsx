@@ -22,9 +22,12 @@ export const FAQ = ({ className }: { className?: string }) => {
       style={{ backgroundColor: "#000000" }}
     >
       {/* Background gradient effects - efeitos roxos sutis */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none" style={{ zIndex: 0 }}>
+      <div
+        className="absolute inset-0 overflow-hidden pointer-events-none"
+        style={{ zIndex: 0 }}
+      >
         {/* Top-center purple glow */}
-        <div
+        {/*  <div
           aria-hidden="true"
           style={{
             position: "absolute",
@@ -37,7 +40,7 @@ export const FAQ = ({ className }: { className?: string }) => {
             background: `radial-gradient(circle, ${purpleGlow} 0%, ${purpleGlow} 30%, transparent 70%)`,
             filter: "blur(80px)",
           }}
-        />
+        /> */}
       </div>
 
       <div className="container relative mx-auto px-4" style={{ zIndex: 10 }}>

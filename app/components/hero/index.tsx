@@ -1,182 +1,94 @@
-"use client";
-
-import { motion } from "framer-motion";
-import { fadeUpTitle, fadeUpStagger } from "@/app/components/animations";
+import { ChevronRight } from "lucide-react";
+import { HeroProps } from "./types";
 import Button from "../ui/button";
 
-const scrollToSection = (id: string) => {
-  document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-};
-
-// Conteúdo fixo do hero
-const heroContent = {
-  announcement: {
-    text: "🎉 New feature release! Check out our ",
-    linkText: "AI Assistant",
-    linkHref: "#",
-  },
-  title: "Sites de alta conversão que elevam seu negócio",
-  description: "Você foca no seu negócio. Nós cuidamos do online",
-};
-
-export default function Hero() {
-  // Cores roxas sutis para os efeitos de luz
-  const purpleGlow = "rgba(139, 92, 246, 0.35)"; // Roxo principal sutil
-  const purpleGlowSecondary = "rgba(168, 85, 247, 0.32)"; // Roxo alternativo sutil
-
-  const renderCallToAction = (
-    cta: { text: string; href: string; variant: "primary" | "secondary" },
-    index: number
-  ) => {
-    if (cta.variant === "primary") {
-      return (
-        <motion.a
-          key={index}
-          href={cta.href}
-          whileHover={{ scale: 1.02 }}
-          whileTap={{ scale: 0.98 }}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6 + index * 0.1, duration: 0.5 }}
-          className="inline-flex items-center justify-center rounded-lg bg-white px-6 py-3 text-base font-semibold text-black shadow-sm hover:bg-gray-50 transition-all duration-200"
-        >
-          {cta.text}
-        </motion.a>
-      );
-    } else {
-      return (
-        <motion.a
-          key={index}
-          href={cta.href}
-          whileHover={{ scale: 1.02 }}
-          whileTap={{ scale: 0.98 }}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6 + index * 0.1, duration: 0.5 }}
-          className="inline-flex items-center gap-2 rounded-lg border border-white/20 bg-transparent px-6 py-3 text-base font-semibold text-white hover:border-white/40 hover:bg-white/5 transition-all duration-200"
-        >
-          {cta.text}
-          <span aria-hidden="true">→</span>
-        </motion.a>
-      );
-    }
-  };
-
+export default function Hero({
+  eyebrow = "Inovação sem limites",
+  title,
+  subtitle,
+  ctaLabel = "Explore Now",
+}: HeroProps) {
   return (
-    <div
-      className="relative min-h-screen w-full overflow-hidden flex items-center justify-center"
-      style={{ backgroundColor: "#000000" }}
+    <section
+      id="hero"
+      className="relative mx-auto w-full pt-40 px-6 text-center md:px-8 
+      min-h-[calc(100vh-40px)] overflow-hidden 
+      bg-[linear-gradient(to_bottom,#fff,#ffffff_50%,#e8e8e8_88%)]  
+      dark:bg-[linear-gradient(to_bottom,#000,#0000_30%,#898e8e_78%,#ffffff_99%_50%)] 
+      rounded-b-xl"
     >
-      {/* Background gradient effects - efeitos roxos sutis e difusos */}
+      {/* Grid BG */}
       <div
-        className="absolute inset-0 overflow-hidden pointer-events-none"
-        style={{ zIndex: 0 }}
-      >
-        {/* Top-left purple glow - canto superior esquerdo */}
-        <div
-          aria-hidden="true"
-          style={{
-            position: "absolute",
-            top: "-150px",
-            left: "-150px",
-            width: "700px",
-            height: "700px",
-            borderRadius: "50%",
-            background: `radial-gradient(circle, ${purpleGlow} 0%, ${purpleGlow} 30%, transparent 70%)`,
-            filter: "blur(80px)",
-            willChange: "transform",
-          }}
-        />
+        className="absolute -z-10 inset-0 opacity-80 h-[600px] w-full 
+        bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] 
+        dark:bg-[linear-gradient(to_right,#333_1px,transparent_1px),linear-gradient(to_bottom,#333_1px,transparent_1px)]
+        bg-[size:6rem_5rem] 
+        [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]"
+      />
 
-        {/* Top-right purple glow - canto superior direito */}
-        <div
-          aria-hidden="true"
-          style={{
-            position: "absolute",
-            top: "-150px",
-            right: "-150px",
-            width: "700px",
-            height: "700px",
-            borderRadius: "50%",
-            background: `radial-gradient(circle, ${purpleGlowSecondary} 0%, ${purpleGlowSecondary} 30%, transparent 70%)`,
-            filter: "blur(80px)",
-            willChange: "transform",
-          }}
-        />
-
-        <div
-          aria-hidden="true"
-          style={{
-            position: "absolute",
-            bottom: "-150px",
-            right: "-150px",
-            width: "700px",
-            height: "700px",
-            borderRadius: "50%",
-            background: `radial-gradient(circle, ${purpleGlow} 0%, ${purpleGlow} 30%, transparent 70%)`,
-            filter: "blur(80px)",
-            willChange: "transform",
-          }}
-        />
-      </div>
-
-      {/* Main content */}
+      {/* Radial Accent */}
       <div
-        className="relative w-full max-w-5xl mx-auto px-6 sm:px-8 lg:px-12 py-20 sm:py-24 lg:py-32"
-        style={{ zIndex: 10 }}
+        className="absolute left-1/2 top-[calc(100%-90px)] lg:top-[calc(100%-150px)] 
+        h-[500px] w-[700px] md:h-[500px] md:w-[1100px] lg:h-[750px] lg:w-[140%] 
+        -translate-x-1/2 rounded-[100%] border-[#B48CDE] bg-white dark:bg-black 
+        bg-[radial-gradient(closest-side,#fff_82%,#000000)] 
+        dark:bg-[radial-gradient(closest-side,#000_82%,#ffffff)] 
+        animate-fade-up"
+      />
+
+      {/* Eyebrow */}
+      {eyebrow && (
+        <a href="#" className="group">
+          <span
+            className="text-sm text-gray-600 dark:text-gray-400 font-geist mx-auto px-5 py-2 
+            bg-gradient-to-tr from-zinc-300/5 via-gray-400/5 to-transparent  
+            border-[2px] border-gray-300/20 dark:border-white/5 
+            rounded-3xl w-fit tracking-tight uppercase flex items-center justify-center"
+          >
+            {eyebrow}
+            <ChevronRight className="inline w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
+          </span>
+        </a>
+      )}
+
+      {/* Title */}
+      <h1
+        className="animate-fade-in -translate-y-4 text-balance 
+        bg-gradient-to-br from-black from-30% to-black/40 
+        bg-clip-text py-6 text-5xl font-semibold leading-none tracking-tighter 
+        text-transparent opacity-0 sm:text-6xl md:text-7xl lg:text-8xl 
+        dark:from-white dark:to-white/40"
       >
-        <div className="mx-auto  text-center">
-          {/* Announcement banner */}
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="mb-8 sm:mb-10 flex justify-center"
-          >
-            <div className="inline-flex items-center gap-1 rounded-lg bg-gray-900/50 border border-gray-800 px-4 py-2 text-sm text-gray-300">
-              <span>{heroContent.announcement.text}</span>
-              <a
-                href={heroContent.announcement.linkHref}
-                className="font-semibold text-white hover:text-gray-200 transition-colors"
-              >
-                {heroContent.announcement.linkText}
-              </a>
-              <span className="ml-1">→</span>
-            </div>
-          </motion.div>
+        {title}
+      </h1>
 
-          {/* Title */}
-          <motion.h1
-            variants={fadeUpTitle}
-            initial="hidden"
-            animate="visible"
-            className="text-5xl sm:text-5xl md:text-5xl lg:text-7xl font-bold tracking-tight text-white mb-6 sm:mb-8 leading-tight whitespace-pre-line"
-          >
-            {heroContent.title}
-          </motion.h1>
+      {/* Subtitle */}
+      <p
+        className="animate-fade-in mb-12 -translate-y-4 text-balance 
+        text-lg tracking-tight text-gray-600 dark:text-gray-400 
+        opacity-0 md:text-xl"
+      >
+        {subtitle}
+      </p>
 
-          {/* Description */}
-          <motion.p
-            variants={fadeUpStagger}
-            initial="hidden"
-            animate="show"
-            className="text-lg sm:text-xl text-gray-400 text-pretty max-w-3xl mx-auto leading-relaxed mb-10 sm:mb-12"
+      {/* CTA */}
+      {ctaLabel && (
+        <div className="flex justify-center">
+          <Button
+            variant="glass"
+            className="mt-[-20px] w-fit md:w-52 z-20 font-geist tracking-tighter text-center text-lg"
           >
-            {heroContent.description}
-          </motion.p>
-
-          <div>
-            <Button
-              onClick={() => scrollToSection("contato")}
-              variant="glass"
-              size="lg"
-              className="min-w-[220px] shadow-2xl"
-            >
-              Entrar em Contato
-            </Button>
-          </div>
+            <a>Entrar em contato</a>
+          </Button>
         </div>
-      </div>
-    </div>
+      )}
+
+      {/* Bottom Fade */}
+      <div
+        className="animate-fade-up relative mt-32 opacity-0 [perspective:2000px] 
+        after:absolute after:inset-0 after:z-50 
+        after:[background:linear-gradient(to_top,hsl(var(--background))_10%,transparent)]"
+      />
+    </section>
   );
 }

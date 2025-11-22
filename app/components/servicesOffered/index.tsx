@@ -50,11 +50,18 @@ export default function Services() {
   const purpleGlowSecondary = "rgba(168, 85, 247, 0.32)";
 
   return (
-    <section id="servicos" className="relative py-32 overflow-hidden text-white" style={{ backgroundColor: "#000000" }}>
+    <section
+      id="servicos"
+      className="relative py-32 overflow-hidden text-white"
+      style={{ backgroundColor: "#000000" }}
+    >
       {/* Background gradient effects - efeitos roxos sutis */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none" style={{ zIndex: 0 }}>
+      <div
+        className="absolute inset-0 overflow-hidden pointer-events-none"
+        style={{ zIndex: 0 }}
+      >
         {/* Top-right purple glow */}
-        <div
+        {/* <div
           aria-hidden="true"
           style={{
             position: "absolute",
@@ -66,9 +73,9 @@ export default function Services() {
             background: `radial-gradient(circle, ${purpleGlowSecondary} 0%, ${purpleGlowSecondary} 30%, transparent 70%)`,
             filter: "blur(80px)",
           }}
-        />
+        /> */}
         {/* Bottom-left purple glow */}
-        <div
+        {/*  <div
           aria-hidden="true"
           style={{
             position: "absolute",
@@ -80,10 +87,13 @@ export default function Services() {
             background: `radial-gradient(circle, ${purpleGlow} 0%, ${purpleGlow} 30%, transparent 70%)`,
             filter: "blur(80px)",
           }}
-        />
+        /> */}
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-6 lg:px-8" style={{ zIndex: 10 }}>
+      <div
+        className="relative max-w-7xl mx-auto px-6 lg:px-8"
+        style={{ zIndex: 10 }}
+      >
         {/* Título */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -96,7 +106,8 @@ export default function Services() {
             O que eu desenvolvo para você
           </h2>
           <p className="mt-6 text-xl text-gray-300">
-            Soluções digitais completas para transformar sua presença online e gerar mais resultados.
+            Soluções digitais completas para transformar sua presença online e
+            gerar mais resultados.
           </p>
         </motion.div>
 

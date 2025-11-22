@@ -7,7 +7,10 @@ import Services from "./components/servicesOffered";
 export default function Home() {
   return (
     <>
-      <Hero />
+      <Hero
+        title={"Sites de alta conversão que elevam seu negócio"}
+        subtitle={"Você foca no seu negócio. Nós cuidamos do online"}
+      />
       <Abount />
       <Services />
       <FAQ />

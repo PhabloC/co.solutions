@@ -23,9 +23,12 @@ export default function About() {
       style={{ backgroundColor: "#000000" }}
     >
       {/* Background gradient effects - efeitos roxos sutis */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none" style={{ zIndex: 0 }}>
+      <div
+        className="absolute inset-0 overflow-hidden pointer-events-none"
+        style={{ zIndex: 0 }}
+      >
         {/* Top-left purple glow */}
-        <div
+        {/* <div
           aria-hidden="true"
           style={{
             position: "absolute",
@@ -37,9 +40,9 @@ export default function About() {
             background: `radial-gradient(circle, ${purpleGlow} 0%, ${purpleGlow} 30%, transparent 70%)`,
             filter: "blur(80px)",
           }}
-        />
+        /> */}
         {/* Bottom-right purple glow */}
-        <div
+        {/*   <div
           aria-hidden="true"
           style={{
             position: "absolute",
@@ -51,10 +54,13 @@ export default function About() {
             background: `radial-gradient(circle, ${purpleGlowSecondary} 0%, ${purpleGlowSecondary} 30%, transparent 70%)`,
             filter: "blur(80px)",
           }}
-        />
+        /> */}
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-6 lg:px-8" style={{ zIndex: 10 }}>
+      <div
+        className="relative max-w-7xl mx-auto px-6 lg:px-8"
+        style={{ zIndex: 10 }}
+      >
         {/* Textos com animação centralizada */}
         <motion.div
           initial="hidden"
@@ -68,14 +74,15 @@ export default function About() {
           </h2>
 
           <p className="text-xl md:text-2xl text-gray-300 leading-relaxed">
-            Sou desenvolvedor especializado em criar soluções que realmente funcionam.
-            Desenvolvo sites profissionais, landing pages de alta conversão, automações
-            inteligentes e integrações com APIs para impulsionar seu negócio.
+            Sou desenvolvedor especializado em criar soluções que realmente
+            funcionam. Desenvolvo sites profissionais, landing pages de alta
+            conversão, automações inteligentes e integrações com APIs para
+            impulsionar seu negócio.
           </p>
 
           <p className="text-lg text-gray-400 max-w-3xl mx-auto">
-            Trabalho com as tecnologias mais modernas do mercado para entregar projetos
-            rápidos, otimizados e que geram resultados mensuráveis.
+            Trabalho com as tecnologias mais modernas do mercado para entregar
+            projetos rápidos, otimizados e que geram resultados mensuráveis.
           </p>
         </motion.div>
 
@@ -88,7 +95,8 @@ export default function About() {
             Tecnologias que utilizo
           </h3>
           <p className="text-center text-gray-400 text-lg mb-12">
-            Sempre trabalhando com as tecnologias mais modernas e eficientes do mercado
+            Sempre trabalhando com as tecnologias mais modernas e eficientes do
+            mercado
           </p>
           <TechStack />
         </div>
