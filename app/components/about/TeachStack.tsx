@@ -43,7 +43,6 @@ export default function TechStack() {
       className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-8 mt-16"
     >
       {techs.map((tech) => {
-        const Icon = tech.icon;
         return (
           <motion.div
             key={tech.name}

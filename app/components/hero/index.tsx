@@ -22,8 +22,8 @@ export default function Hero({
         className="absolute -z-10 inset-0 opacity-80 h-[600px] w-full 
         bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] 
         dark:bg-[linear-gradient(to_right,#333_1px,transparent_1px),linear-gradient(to_bottom,#333_1px,transparent_1px)]
-        bg-[size:6rem_5rem] 
-        [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]"
+        bg-size-[6rem_5rem] 
+        mask-[radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]"
       />
 
       {/* Radial Accent */}
@@ -41,8 +41,8 @@ export default function Hero({
         <a href="#" className="group">
           <span
             className="text-sm text-gray-600 dark:text-gray-400 font-geist mx-auto px-5 py-2 
-            bg-gradient-to-tr from-zinc-300/5 via-gray-400/5 to-transparent  
-            border-[2px] border-gray-300/20 dark:border-white/5 
+            bg-linear-to-tr from-zinc-300/5 via-gray-400/5 to-transparent  
+            border-2 border-gray-300/20 dark:border-white/5 
             rounded-3xl w-fit tracking-tight uppercase flex items-center justify-center"
           >
             {eyebrow}
@@ -54,7 +54,7 @@ export default function Hero({
       {/* Title */}
       <h1
         className="animate-fade-in -translate-y-4 text-balance 
-        bg-gradient-to-br from-black from-30% to-black/40 
+        bg-linear-to-br from-black from-30% to-black/40 
         bg-clip-text py-6 text-5xl font-semibold leading-none tracking-tighter 
         text-transparent opacity-0 sm:text-6xl md:text-7xl lg:text-8xl 
         dark:from-white dark:to-white/40"
@@ -76,7 +76,7 @@ export default function Hero({
         <div className="flex justify-center">
           <Button
             variant="glass"
-            className="mt-[-20px] w-fit md:w-52 z-20 font-geist tracking-tighter text-center text-lg"
+            className="-mt-5 w-fit md:w-52 z-20 font-geist tracking-tighter text-center text-lg"
           >
             <a>Entrar em contato</a>
           </Button>
@@ -85,7 +85,7 @@ export default function Hero({
 
       {/* Bottom Fade */}
       <div
-        className="animate-fade-up relative mt-32 opacity-0 [perspective:2000px] 
+        className="animate-fade-up relative mt-32 opacity-0 perspective-[2000px] 
         after:absolute after:inset-0 after:z-50 
         after:[background:linear-gradient(to_top,hsl(var(--background))_10%,transparent)]"
       />

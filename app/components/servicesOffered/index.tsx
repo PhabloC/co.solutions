@@ -45,50 +45,16 @@ const services: Service[] = [
 ];
 
 export default function Services() {
-  // Cores roxas sutis para os efeitos de luz (mesmo estilo do hero)
-  const purpleGlow = "rgba(139, 92, 246, 0.35)";
-  const purpleGlowSecondary = "rgba(168, 85, 247, 0.32)";
-
   return (
     <section
       id="servicos"
       className="relative py-32 overflow-hidden text-white"
       style={{ backgroundColor: "#000000" }}
     >
-      {/* Background gradient effects - efeitos roxos sutis */}
       <div
         className="absolute inset-0 overflow-hidden pointer-events-none"
         style={{ zIndex: 0 }}
-      >
-        {/* Top-right purple glow */}
-        {/* <div
-          aria-hidden="true"
-          style={{
-            position: "absolute",
-            top: "-150px",
-            right: "-150px",
-            width: "700px",
-            height: "700px",
-            borderRadius: "50%",
-            background: `radial-gradient(circle, ${purpleGlowSecondary} 0%, ${purpleGlowSecondary} 30%, transparent 70%)`,
-            filter: "blur(80px)",
-          }}
-        /> */}
-        {/* Bottom-left purple glow */}
-        {/*  <div
-          aria-hidden="true"
-          style={{
-            position: "absolute",
-            bottom: "-150px",
-            left: "-150px",
-            width: "700px",
-            height: "700px",
-            borderRadius: "50%",
-            background: `radial-gradient(circle, ${purpleGlow} 0%, ${purpleGlow} 30%, transparent 70%)`,
-            filter: "blur(80px)",
-          }}
-        /> */}
-      </div>
+      ></div>
 
       <div
         className="relative max-w-7xl mx-auto px-6 lg:px-8"

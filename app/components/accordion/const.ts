@@ -1,4 +1,3 @@
-// Dados puros — fácil de editar, traduzir ou versionar
 export const categories = {
   general: "Geral",
   billing: "Faturamento",

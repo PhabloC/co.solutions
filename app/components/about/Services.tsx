@@ -67,12 +67,12 @@ export default function Services() {
         <motion.article
           key={service.title}
           variants={card}
-          className="group relative p-8 rounded-3xl bg-gradient-to-b from-white/5 to-transparent 
+          className="group relative p-8 rounded-3xl bg-linear-to-b from-white/5 to-transparent 
                      backdrop-blur-sm border border-white/10 overflow-hidden
                      hover:border-white/20 transition-all duration-500"
         >
           <div
-            className="absolute inset-0 bg-gradient-to-br from-purple-600/10 to-pink-600/10 
+            className="absolute inset-0 bg-linear-to-br from-purple-600/10 to-pink-600/10 
                         opacity-0 group-hover:opacity-100 transition-opacity duration-700"
           />
 

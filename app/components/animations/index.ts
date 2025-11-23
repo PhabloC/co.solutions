@@ -1,4 +1,3 @@
-// src/animations/index.ts
 export {
   fadeUpTitle,
   staggerContainer,

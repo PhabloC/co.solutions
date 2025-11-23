@@ -1,7 +1,5 @@
-// src/animations/motion-presets.ts
 import type { Variants } from "framer-motion";
 
-/* ===== Título com fade + slide up (usado no About) ===== */
 export const fadeUpTitle: Variants = {
   hidden: { opacity: 0, y: 50 },
   visible: {
@@ -14,7 +12,6 @@ export const fadeUpTitle: Variants = {
   },
 };
 
-/* ===== Container com stagger para cards (About + Services) ===== */
 export const staggerContainer: Variants = {
   hidden: { opacity: 0 },
   show: {
@@ -26,7 +23,6 @@ export const staggerContainer: Variants = {
   },
 };
 
-/* ===== Card individual com slide up (About + Services) ===== */
 export const fadeUpCard: Variants = {
   hidden: { opacity: 0, y: 60 },
   show: {
@@ -39,7 +35,6 @@ export const fadeUpCard: Variants = {
   },
 };
 
-/* ===== Para textos menores com stagger suave ===== */
 export const fadeUpStagger: Variants = {
   hidden: { opacity: 0, y: 30 },
   show: {
@@ -52,7 +47,6 @@ export const fadeUpStagger: Variants = {
   },
 };
 
-/* ===== Tech stack icons (entrada suave) ===== */
 export const techItem: Variants = {
   hidden: { opacity: 0, y: 20 },
   show: {

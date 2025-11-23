@@ -12,36 +12,15 @@ export const FAQ = ({ className }: { className?: string }) => {
   const [selectedCategory, setSelectedCategory] =
     useState<CategoryKey>("general");
 
-  // Cores roxas sutis para os efeitos de luz (mesmo estilo do hero)
-  const purpleGlow = "rgba(139, 92, 246, 0.35)";
-  const purpleGlowSecondary = "rgba(168, 85, 247, 0.32)";
-
   return (
     <section
       className={cn("relative overflow-hidden py-20 md:py-28", className)}
       style={{ backgroundColor: "#000000" }}
     >
-      {/* Background gradient effects - efeitos roxos sutis */}
       <div
         className="absolute inset-0 overflow-hidden pointer-events-none"
         style={{ zIndex: 0 }}
-      >
-        {/* Top-center purple glow */}
-        {/*  <div
-          aria-hidden="true"
-          style={{
-            position: "absolute",
-            top: "-150px",
-            left: "50%",
-            transform: "translateX(-50%)",
-            width: "700px",
-            height: "700px",
-            borderRadius: "50%",
-            background: `radial-gradient(circle, ${purpleGlow} 0%, ${purpleGlow} 30%, transparent 70%)`,
-            filter: "blur(80px)",
-          }}
-        /> */}
-      </div>
+      ></div>
 
       <div className="container relative mx-auto px-4" style={{ zIndex: 10 }}>
         {/* Header */}

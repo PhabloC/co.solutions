@@ -25,7 +25,7 @@ export default function Footer() {
               className="inline-flex items-center gap-3 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/40 transition-opacity hover:opacity-90"
               aria-label="Co. Solutions - Página inicial"
             >
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center shadow-xl"></div>
+              <div className="w-12 h-12 rounded-xl bg-linear-to-br from-primary to-accent flex items-center justify-center shadow-xl"></div>
               <span className="text-2xl font-black text-white tracking-tight">
                 Co. Solutions
               </span>

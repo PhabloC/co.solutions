@@ -8,7 +8,6 @@ import { Loader2, MessageCircleMore, Send } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { ContactSectionProps } from "./types";
 
-// Schema de validação com Zod
 const contactSchema = z.object({
   name: z.string().min(2, "Nome deve ter pelo menos 2 caracteres"),
   email: z.string().email("E-mail inválido"),
@@ -37,7 +36,6 @@ export default function Contact({ className }: ContactSectionProps) {
     setSubmitStatus("idle");
 
     try {
-      // Substitua pela sua API real ou use um serviço como Formspree, EmailJS, etc.
       await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -53,44 +51,20 @@ export default function Contact({ className }: ContactSectionProps) {
     }
   };
 
-  // Cores roxas sutis para os efeitos de luz (mesmo estilo do hero)
-  const purpleGlow = "rgba(139, 92, 246, 0.35)";
-  const purpleGlowSecondary = "rgba(168, 85, 247, 0.32)";
-
   return (
-    <section className={cn("w-full py-24", className)} id="contato" style={{ backgroundColor: "#000000" }}>
-      {/* Background gradient effects - efeitos roxos sutis */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none" style={{ zIndex: 0 }}>
-        {/* Bottom-left purple glow */}
-        <div
-          aria-hidden="true"
-          style={{
-            position: "absolute",
-            bottom: "-150px",
-            left: "-150px",
-            width: "700px",
-            height: "700px",
-            borderRadius: "50%",
-            background: `radial-gradient(circle, ${purpleGlow} 0%, ${purpleGlow} 30%, transparent 70%)`,
-            filter: "blur(80px)",
-          }}
-        />
-        {/* Top-right purple glow */}
-        <div
-          aria-hidden="true"
-          style={{
-            position: "absolute",
-            top: "-150px",
-            right: "-150px",
-            width: "700px",
-            height: "700px",
-            borderRadius: "50%",
-            background: `radial-gradient(circle, ${purpleGlowSecondary} 0%, ${purpleGlowSecondary} 30%, transparent 70%)`,
-            filter: "blur(80px)",
-          }}
-        />
-      </div>
-      <div className="relative mx-auto max-w-7xl px-6 lg:px-8" style={{ zIndex: 10 }}>
+    <section
+      className={cn("w-full py-24", className)}
+      id="contato"
+      style={{ backgroundColor: "#000000" }}
+    >
+      <div
+        className="absolute inset-0 overflow-hidden pointer-events-none"
+        style={{ zIndex: 0 }}
+      ></div>
+      <div
+        className="relative mx-auto max-w-7xl px-6 lg:px-8"
+        style={{ zIndex: 10 }}
+      >
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           {/* Textos */}
           <div className="space-y-8">
@@ -98,8 +72,9 @@ export default function Contact({ className }: ContactSectionProps) {
               Vamos conversar sobre seu projeto?
             </h2>
             <p className="text-lg text-gray-300 leading-relaxed">
-              Preencha o formulário ao lado e eu entro em contato o mais rápido possível.
-              Vamos juntos transformar suas ideias em uma solução digital que gere resultados reais para seu negócio.
+              Preencha o formulário ao lado e eu entro em contato o mais rápido
+              possível. Vamos juntos transformar suas ideias em uma solução
+              digital que gere resultados reais para seu negócio.
             </p>
 
             <div className="space-y-6 pt-8">
