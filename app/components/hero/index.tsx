@@ -53,20 +53,20 @@ export default function Hero({
 
       {/* Title */}
       <h1
-        className="animate-fade-in -translate-y-4 text-balance 
-        bg-linear-to-br from-black from-30% to-black/40 
-        bg-clip-text py-6 text-5xl font-semibold leading-none tracking-tighter 
-        text-transparent opacity-0 sm:text-6xl md:text-7xl lg:text-8xl 
-        dark:from-white dark:to-white/40"
+        className="animate-in fade-in duration-1000 delay-300 fill-mode-forwards
+             text-balance bg-linear-to-br from-black from-30% to-black/40 
+             bg-clip-text py-6 text-5xl font-semibold leading-none tracking-tighter 
+             text-transparent sm:text-6xl md:text-7xl lg:text-7xl
+             dark:from-white dark:to-white/40"
       >
         {title}
       </h1>
 
       {/* Subtitle */}
       <p
-        className="animate-fade-in mb-12 -translate-y-4 text-balance 
-        text-lg tracking-tight text-gray-600 dark:text-gray-400 
-        opacity-0 md:text-xl"
+        className="animate-in fade-in duration-1000 delay-700 fill-mode-forwards
+             mb-12 text-balance text-lg tracking-tight text-gray-600 
+             dark:text-gray-400 md:text-xl"
       >
         {subtitle}
       </p>
@@ -75,8 +75,8 @@ export default function Hero({
       {ctaLabel && (
         <div className="flex justify-center">
           <Button
-            variant="glass"
-            className="-mt-5 w-fit md:w-52 z-20 font-geist tracking-tighter text-center text-lg"
+            variant="secondary"
+            className="-mt-5 w-fit md:w-52 z-20 font-geist tracking-tighter text-center text-lg "
           >
             <a>Entrar em contato</a>
           </Button>

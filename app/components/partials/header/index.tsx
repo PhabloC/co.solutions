@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import Button from "../../ui/button";
+import Image from "next/image";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -35,7 +36,15 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <nav className="flex items-center justify-between py-4">
           <div className="flex items-center gap-2">
-            <span className="text-xl font-bold text-white">Co. Solutions</span>
+            <span className="text-xl font-bold text-white">
+              <Image
+                src="/logo.png"
+                alt="Co. Solutions - Logo"
+                width={150}
+                height={150}
+                className="object-cover"
+              />
+            </span>
           </div>
 
           {/* Desktop Menu */}
@@ -64,7 +73,11 @@ const Header = () => {
             >
               Contato
             </button>
-            <Button onClick={() => scrollToSection("contato")} variant="glass">
+            <Button
+              onClick={() => scrollToSection("contato")}
+              variant="glass"
+              size="sm"
+            >
               Solicitar Orçamento
             </Button>
           </div>
@@ -105,7 +118,11 @@ const Header = () => {
             >
               Contato
             </button>
-            <Button onClick={() => scrollToSection("contato")} variant="glass">
+            <Button
+              onClick={() => scrollToSection("contato")}
+              variant="glass"
+              size="sm"
+            >
               Solicitar Orçamento
             </Button>
           </div>

@@ -34,20 +34,21 @@ export default function About() {
           variants={fadeUpTitle}
           className="text-center max-w-4xl mx-auto space-y-8"
         >
-          <h2 className="text-5xl md:text-7xl font-bold text-white">
+          <h2 className="text-5xl md:text-6xl font-bold text-white">
             Desenvolvimento digital focado em resultados
           </h2>
 
           <p className="text-xl md:text-2xl text-gray-300 leading-relaxed">
-            Sou desenvolvedor especializado em criar soluções que realmente
-            funcionam. Desenvolvo sites profissionais, landing pages de alta
-            conversão, automações inteligentes e integrações com APIs para
-            impulsionar seu negócio.
+            Nós somos especialistas em criar soluções digitais que realmente
+            entregam resultados. Desenvolvemos sites profissionais, landing
+            pages de alta conversão, automações inteligentes e integrações
+            completas com APIs para acelerar o crescimento do seu negócio.
           </p>
 
           <p className="text-lg text-gray-400 max-w-3xl mx-auto">
-            Trabalho com as tecnologias mais modernas do mercado para entregar
-            projetos rápidos, otimizados e que geram resultados mensuráveis.
+            Trabalhamos com as tecnologias mais modernas do mercado para
+            entregar projetos rápidos, altamente otimizados e que geram
+            resultados reais e mensuráveis.
           </p>
         </motion.div>
 

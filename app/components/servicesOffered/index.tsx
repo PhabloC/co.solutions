@@ -68,8 +68,8 @@ export default function Services() {
           transition={{ duration: 0.9, ease: "easeOut" }}
           className="text-center max-w-4xl mx-auto mb-20"
         >
-          <h2 className="text-5xl md:text-7xl font-bold text-white">
-            O que eu desenvolvo para você
+          <h2 className="text-5xl md:text-6xl font-bold text-white">
+            O que oferecemos
           </h2>
           <p className="mt-6 text-xl text-gray-300">
             Soluções digitais completas para transformar sua presença online e
