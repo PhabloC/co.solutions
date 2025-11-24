@@ -56,7 +56,7 @@ export default function Hero({
         className="animate-in fade-in duration-1000 delay-300 fill-mode-forwards
              text-balance bg-linear-to-br from-black from-30% to-black/40 
              bg-clip-text py-6 text-5xl font-semibold leading-none tracking-tighter 
-             text-transparent sm:text-6xl md:text-7xl lg:text-7xl
+             text-transparent sm:text-6xl md:text-7xl lg:text-8xl
              dark:from-white dark:to-white/40"
       >
         {title}
