@@ -4,39 +4,39 @@ import type { Service } from "./types";
 
 const services: Service[] = [
   {
-    title: "Criação de Sites Profissionais",
+    title: "Consultoria e Projeto Personalizado",
     description:
-      "Sites institucionais modernos, rápidos e totalmente responsivos.",
+      "Visitamos seu espaço, entendemos suas necessidades e criamos soluções sob medida.",
     icon: <Globe className="w-8 h-8" />,
   },
   {
-    title: "Landings de Alta Conversão",
+    title: "Execução com Excelência",
     description:
-      "Páginas focadas em resultados com design estratégico e copy persuasivo.",
+      "Equipes qualificadas, materiais de primeira linha e cronograma respeitado.",
     icon: <Rocket className="w-8 h-8" />,
   },
   {
-    title: "Integração com APIs Externas",
+    title: "Integração de Sistemas",
     description:
-      "Conectamos seu projeto com qualquer serviço: pagamentos, ERPs, WhatsApp, etc.",
+      "Conectamos e integramos diferentes tecnologias para uma solução completa e eficiente.",
     icon: <Cpu className="w-8 h-8" />,
   },
   {
-    title: "Automação & CRM",
+    title: "Acompanhamento Total",
     description:
-      "Fluxos automáticos de vendas, nutrição de leads e gestão completa.",
+      "Portal do cliente com fotos diárias, cronograma atualizado e comunicação direta.",
     icon: <Workflow className="w-8 h-8" />,
   },
   {
-    title: "Otimização de Desempenho",
+    title: "Garantia Estendida",
     description:
-      "Core Web Vitals 100+, LCP < 1s, lazy loading, imagens otimizadas.",
+      "Mínimo 2 anos de garantia, manutenção preventiva e suporte técnico 24/7.",
     icon: <Zap className="w-8 h-8" />,
   },
   {
-    title: "Acessoria Contínua",
+    title: "Parcerias Confiáveis",
     description:
-      "Suporte mensal, atualizações e evolução constante do seu projeto.",
+      "Trabalhos em todo o Brasil com equipes próprias e parceiros homologados e certificados.",
     icon: <ShieldCheck className="w-8 h-8" />,
   },
 ];
@@ -86,7 +86,6 @@ export default function Services() {
             <h3 className="text-2xl font-bold text-white mb-3">
               {service.title}
             </h3>
-            56{" "}
             <p className="text-white/70 leading-relaxed">
               {service.description}
             </p>

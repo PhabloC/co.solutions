@@ -35,37 +35,25 @@ export default function About() {
           className="text-center max-w-4xl mx-auto space-y-8"
         >
           <h2 className="text-5xl md:text-6xl font-bold text-white">
-            Desenvolvimento digital focado em resultados
+            Soluções completas focadas em resultados
           </h2>
 
           <p className="text-xl md:text-2xl text-gray-300 leading-relaxed">
-            Nós somos especialistas em criar soluções digitais que realmente
-            entregam resultados. Desenvolvemos sites profissionais, landing
-            pages de alta conversão, automações inteligentes e integrações
-            completas com APIs para acelerar o crescimento do seu negócio.
+            Somos especialistas em entregar soluções que transformam seus
+            espaços e negócios. Com mais de 15 anos de experiência, realizamos
+            projetos residenciais e comerciais com qualidade, transparência e
+            prazos respeitados, gerando resultados reais e mensuráveis.
           </p>
 
           <p className="text-lg text-gray-400 max-w-3xl mx-auto">
-            Trabalhamos com as tecnologias mais modernas do mercado para
-            entregar projetos rápidos, altamente otimizados e que geram
-            resultados reais e mensuráveis.
+            Trabalhamos com equipes certificadas e materiais de primeira linha
+            para entregar projetos rápidos, bem executados e com garantia
+            estendida em todo o Brasil.
           </p>
         </motion.div>
 
         {/* Serviços */}
         <Services />
-
-        {/* Tecnologias */}
-        <div className="mt-32">
-          <h3 className="text-3xl md:text-4xl font-bold text-center mb-4 text-white">
-            Tecnologias que utilizo
-          </h3>
-          <p className="text-center text-gray-400 text-lg mb-12">
-            Sempre trabalhando com as tecnologias mais modernas e eficientes do
-            mercado
-          </p>
-          <TechStack />
-        </div>
       </div>
     </section>
   );
