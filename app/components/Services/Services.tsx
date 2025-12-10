@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Globe, Rocket, Cpu, Workflow, Zap, ShieldCheck } from "lucide-react";
-import type { Service } from "./types";
 import { fadeUpCard, staggerContainer } from "../animations/motion-presets";
+import { Service } from "./types";
 
 const services: Service[] = [
   {

@@ -2,9 +2,9 @@
 
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import Services from "./Services";
-import TechStack from "./TeachStack";
+
 import { fadeUpTitle } from "../animations/motion-presets";
+import Services from "../Services/Services";
 
 export default function About() {
   const [ref] = useInView({
