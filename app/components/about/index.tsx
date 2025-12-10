@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 import { fadeUpTitle } from "../animations/motion-presets";
-import Services from "../Services/Services";
 
 export default function About() {
   const [ref] = useInView({
@@ -45,15 +44,9 @@ export default function About() {
             prazos respeitados, gerando resultados reais e mensuráveis.
           </p>
 
-          <p className="text-lg text-gray-400 max-w-3xl mx-auto">
-            Trabalhamos com equipes certificadas e materiais de primeira linha
-            para entregar projetos rápidos, bem executados e com garantia
-            estendida em todo o Brasil.
-          </p>
+         
         </motion.div>
 
-        {/* Serviços */}
-        <Services />
       </div>
     </section>
   );

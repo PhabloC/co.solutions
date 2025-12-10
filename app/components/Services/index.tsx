@@ -2,21 +2,13 @@
 
 import { cn } from "@/lib/utils";
 import { GlowingEffect } from "../ui/glowingEffect";
-import { GridItemProps } from "./types";
 import { services } from "./const";
+import { GridItemProps } from "./types";
 
-export function ServicesOffered() {
+export function Services() {
   return (
-    <div className="w-full ">
-      {/* Header Section */}
-      <div className="text-center mb-12 md:mb-16 max-w-4xl mx-auto px-6 ">
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-black dark:text-white mb-4 tracking-tight">
-          O que oferecemos
-        </h2>
-        <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed">
-          Soluções digitais completas para transformar sua presença online e gerar mais resultados.
-        </p>
-      </div>
+    <div className="w-full">
+     
 
       {/* Services Grid */}
       <div className="flex justify-center w-full">

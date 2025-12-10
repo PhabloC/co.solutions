@@ -1,10 +1,9 @@
 import Abount from "./components/about";
-import { ServicesTeste } from "./components/ServiceTeste/ServiceTeste";
-
 import { FAQ } from "./components/accordion";
 import Contact from "./components/contact";
 import Hero from "./components/hero";
-import Services from "./components/servicesOffered";
+import { Services } from "./components/Services";
+import { ServicesOffered } from "./components/ServicesOffered";
 
 export default function Home() {
   return (
@@ -15,7 +14,7 @@ export default function Home() {
       />
       <Abount />
       <Services />
-      <ServicesTeste />
+      <ServicesOffered />
       <FAQ />
       <Contact />
     </>
