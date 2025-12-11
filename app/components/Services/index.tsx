@@ -8,8 +8,6 @@ import { GridItemProps } from "./types";
 export function Services() {
   return (
     <div className="w-full">
-     
-
       {/* Services Grid */}
       <div className="flex justify-center w-full">
         <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-7xl w-full">
