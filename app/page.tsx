@@ -2,7 +2,7 @@ import Abount from "./components/about";
 import { FAQ } from "./components/accordion";
 import Contact from "./components/contact";
 import Hero from "./components/hero";
-import { Services } from "./components/services";
+import { Services } from "./components/pack-services";
 import { ServicesOffered } from "./components/services-offered";
 
 export default function Home() {
