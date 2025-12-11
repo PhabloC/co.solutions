@@ -1,8 +1,7 @@
 "use client";
 
-import { cn } from "@/lib/utils";
 import { GlowingEffect } from "../ui/glowingEffect";
-import { services } from "./const";
+import { services } from "../services-offered/const";
 import { GridItemProps } from "./types";
 
 export function Services() {

@@ -2,8 +2,8 @@ import Abount from "./components/about";
 import { FAQ } from "./components/accordion";
 import Contact from "./components/contact";
 import Hero from "./components/hero";
-import { Services } from "./components/Services";
-import { ServicesOffered } from "./components/ServicesOffered";
+import { Services } from "./components/services";
+import { ServicesOffered } from "./components/services-offered";
 
 export default function Home() {
   return (
